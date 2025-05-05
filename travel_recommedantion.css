@@ -1,0 +1,337 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    overflow-y: scroll;
+}
+
+/*Background image*/
+body{
+    position: relative;
+    z-index: 0; /*Body is on the normal layer*/
+}
+
+body::before{ /*Creates a fake element before the body*/
+    content: ''; /*Blank layer*/
+    position: fixed;
+    top: 0rem; left: 0; right: 0; bottom: 0; /*Edges of the pseudo element*/
+    background-color: white;
+    background-image:
+    linear-gradient(to right, rgba(0, 97, 109, 0.87), rgba(255, 255, 255, 0.1)),
+    url('destinationsImages/NY Wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.72;
+    z-index: -1; /*Moves the element behind the body*/
+}
+
+/*Navigation Bar*/
+#navBar{
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 4rem;
+    background-color: black;
+}
+/*Sets the margin for al three containers of the navigation bar*/
+.navElement{
+    margin: 0.7rem;
+}
+/*Nav Links section properties*/
+#navLinks {
+    position: relative;
+}
+
+#navLinks ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 100%;
+    align-items: center;
+}
+
+#navLinks a{
+    text-decoration: none;
+    color: white;
+    font-weight: 450;
+    transition: all 0.3s ease 0s;
+}
+
+#navLinks a:hover{
+    color: aquamarine;
+}
+/*Nav Logo section properties*/
+#navLogo{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+#navLogo a img{
+    width: 25px;
+    height: auto;
+}
+
+#navLogo a {
+    text-decoration: none;
+    color: white;
+    font-weight: 450;
+    transition: all 0.3s ease 0s;
+}
+
+#navLogo a:hover{
+    color: aquamarine;
+}
+/*Search Section properties*/
+#navSearch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 2.2rem;
+}
+/*Nav Search input field*/
+#navSearch input{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    text-align: left; /*Aligned the placeholder and text cursor*/
+    padding-left: 2.7rem; /*Moved the input text cursor to the right*/
+    outline: none; /*Input border*/
+}
+
+#navSearch input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+}
+/*Buttons position inside their container*/
+#buttonsContainer{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+    right: 1rem;
+}
+
+#navSearch button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 450;
+    background-color: black;
+    color: white;
+}
+
+#navSearch button {
+    width: 3.7rem;
+    height: 1.2rem;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.3s ease 0s
+}
+
+#navSearch button:hover{
+    background-color: #00616c;  
+}
+
+#navSearch button:active{
+    transform: scale(0.9);   
+}
+/*Image Icon inside the input*/
+#navSearch a img{
+    position: absolute;
+    width: 25px;
+    height: auto;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+/*Home Page*/
+#homePage{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    padding: 0.5rem;
+    padding-top: 6rem;
+}
+/*First section of Home Page (networkLinks)*/
+#networkLinks{
+    width: 3rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+
+#networkLinks a{
+   justify-content: space-around;
+   margin-top: 1rem;
+   margin-bottom: 0.2rem;
+}
+
+#networkLinks img{
+   width: 20px;
+   height: auto;
+   transition: all 0.3s ease 0s;
+}
+
+#networkLinks img:hover{
+    width: 30px;
+    height: auto;
+}
+
+#verticalLine{
+    width: 1px;
+    height: 9rem;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+/*Second section of Home Page, Main Text*/
+#mainText {
+    margin: 1rem;
+    margin-top: -1rem;
+    padding: 0.5rem 2rem;
+    color: white;
+    width: 40vw;
+    position: sticky;
+}
+
+#mainText h2{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#mainText p{
+    margin: 1rem;
+    width: 70%;
+    font-size: 0.8rem;
+}
+
+#mainText button{
+    margin: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    width: 7rem;
+    height: 1.2rem;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease 0s
+}
+
+#mainText button:hover{
+    background-color: #00616c;
+}
+
+#mainText button:active{
+    transform: scale(0.9);   
+}
+/*Third section of Home Page, results container*/
+#resultContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    max-height: 80vh;
+    margin: 0 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    overflow-y: auto;
+    overflow-x: visible;
+    scrollbar-width: none;
+    
+}
+
+.resultCard{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.resultCard{
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+}
+
+.resultCard{
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+}
+
+.resultCard:hover{
+    transform: scale(1.03) translateY(-5px);   
+}
+
+.cardImage{
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    align-items: center;
+}
+
+.resultCard h3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.resultCard p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+/*Local time properties */
+
+#localTime-container{
+    position: fixed;
+    top: 4rem;
+    right: 2rem;
+    width: 46vw;
+    margin: 1rem 0;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #00616c;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    color: white;
+    z-index: 3;
+    font-size: 1rem;
+}
+

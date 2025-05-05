@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendations</title>
+    <link rel="stylesheet" href="travel_recommedantion.css">
+</head>
+<body>
+    <div id="navContainer">
+        <nav id="navBar">
+            <div id="navLogo" class="navElement">
+                <a href="index.html"><img src="icons/icon_airplane.png" alt="icon"></a>
+                <a href="index.html">TravelBloom</a>
+            </div>
+            <div id="navLinks" class="navElement">
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about_us.html"><li>About Us</li></a>
+                    <a href="contact_us.html"><li>Contact Us</li></a>
+                </ul>
+            </div>
+            <div id="navSearch" class="navElement">
+                <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+                <a href="#"><img src="icons/search_icon.png" alt="" id="searchIcon"></a>
+                <div id="buttonsContainer">
+                <button id="searchBtn">Search</button>
+                <button id="clearBtn">Clear</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Home Page -->
+     <div id="homePage">
+        <div id="networkLinks">
+            <div id="verticalLine"></div>
+            <a href="https://x.com/" target = "_blank"><img src="icons/x icon.png" alt="x icon"></a>
+            <a href="https://www.facebook.com/" target = "_blank"><img src="icons/facebook icon.png" alt=""></a>
+            <a href="https://www.instagram.com/" target = "_blank"><img src="icons/instagram icon.png" alt=""></a>
+            <a href="https://www.youtube.com/" target = "_blank"><img src="icons/youtube icon.png" alt=""></a>
+        </div>
+        <div id="mainText">
+            <h2>Explore<br>
+                Dream<br>
+                Destination</h2>
+            <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+            <button>Book Now</button>
+        </div>
+            
+        <div id="resultContainer">
+            <div id="localTime"></div>
+            <div id="searchResult"></div>
+        </div>
+     </div>
+
+     <script src="travel_recommendation.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+/*Background image*/
+body{
+    position: relative;
+    z-index: 0; /*Body is on the normal layer*/
+}
+
+body::before{ /*Creates a fake element before the body*/
+    content: ''; /*Blank layer*/
+    position: fixed;
+    top: 0rem; left: 0; right: 0; bottom: 0; /*Edges of the pseudo element*/
+    background-color: white;
+    background-image:
+    linear-gradient(to right, rgba(0, 97, 109, 0.87), rgba(255, 255, 255, 0.1)),
+    url('destinationsImages/NY Wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.72;
+    z-index: -1; /*Moves the element behind the body*/
+}
+
+/*Navigation Bar*/
+#navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 4rem;
+    background-color: black;
+    padding: 0 2rem;
+}
+/*Sets the margin for al three containers of the navigation bar*/
+.navElement {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/*Nav Links section properties*/
+#navLinks {
+    position: relative;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+#navLinks ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+#navLinks a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin: 0 5rem;
+}
+
+#navLinks a:hover{
+    color: aquamarine;
+}
+/*Nav Logo section properties*/
+#navLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#navLogo a img{
+    width: 25px;
+    height: auto;
+}
+
+#navLogo a {
+    text-decoration: none;
+    color: white;
+    font-weight: 450;
+    transition: all 0.3s ease 0s;
+}
+
+#navLogo a:hover{
+    color: aquamarine;
+}
+
+/*Home Page*/
+#homePage{
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    position: relative;
+    padding: 0.5rem;
+    padding-top: 6rem;
+    align-items: center;
+}
+/*First section of Home Page (networkLinks)*/
+#networkLinks{
+    width: 3rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -1rem;
+    margin-left: 1rem;
+    position: fixed;
+}
+
+#networkLinks a{
+   justify-content: space-around;
+   margin-top: 1rem;
+   margin-bottom: 0.2rem;
+}
+
+#networkLinks img{
+   width: 20px;
+   height: auto;
+   transition: all 0.3s ease 0s;
+}
+
+#networkLinks img:hover{
+    width: 30px;
+    height: auto;
+}
+
+#verticalLine{
+    width: 1px;
+    height: 9rem;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+/*Second section of Home Page, Main Text*/
+#mainText {
+    margin: 1rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    padding: 0.5rem 2rem;
+    color: white;
+    width: 40vw;
+    height: 15rem;
+    block-size: fit-content;
+}
+
+#mainText h2{
+    font-size: 2rem;
+    padding: 1rem;
+    margin-left: 5rem;
+}
+
+#mainText p{
+    margin-left: 6.3rem;
+    width: 95%;
+    font-size: 0.8rem;
+}
+
+/*Form style*/
+#contactForm{
+    box-sizing: fit-content;
+    width: 40vw;
+    height: auto;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.5));
+    border-radius: 20px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    height: 560h;
+    justify-content: space-around;
+    color: white;
+    font-weight: 450;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    gap: 0.5rem;
+}
+
+#form input{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+#form input::placeholder{
+color: white;
+opacity: 0.85;
+}
+
+#form textarea{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+#form button{
+    margin: 0 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    height: 1.4rem;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease 0s
+ }
+
+ #nameField{
+    height: 1.7rem;
+ }
+
+ #emailField{
+    height: 1.7rem;
+ }
+
+ #msgField{
+    height: 7rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    resize: none;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    margin-bottom: 1rem;
+ }
+
+ #msgField::placeholder {
+    color: white;
+    opacity: 0.85;
+    text-align: start;
+    font-size: 1rem;
+}
+ 
+ #form  button:hover{
+    background-color: #00616c;
+}
+
+#form  button:active{
+    transform: scale(0.9);   
+}
+/* Pop-up style */
+#popupContainer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 30vw;
+    height: auto;
+}
+
+#popUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.1));
+    color: white;
+    border-radius: 1rem;
+    backdrop-filter: blur(30px);
+
+    padding: 0.5rem;
+}
+
+#popUp p{
+  box-sizing: border-box;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+
+#popupContainer img{
+    width: 25%;
+}
+
+#popupContainer button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: black;
+
+    width: 25%;
+    height: 1.5rem;
+    background-color: white;
+    border: none;
+
+    margin: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+}
+
+#popupContainer button:hover{
+    background-color: #00616c;   
+    color: white;
+}

@@ -1,0 +1,310 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*Background image*/
+body{
+    position: relative;
+    z-index: 0; /*Body is on the normal layer*/
+}
+
+body::before{ /*Creates a fake element before the body*/
+    content: ''; /*Blank layer*/
+    position: fixed;
+    top: 0rem; left: 0; right: 0; bottom: 0; /*Edges of the pseudo element*/
+    background-color: white;
+    background-image:
+    linear-gradient(to right, rgba(0, 97, 109, 0.87), rgba(255, 255, 255, 0.1)),
+    url('destinationsImages/NY Wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.72;
+    z-index: -1; /*Moves the element behind the body*/
+}
+
+/*Navigation Bar*/
+#navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 4rem;
+    background-color: black;
+    padding: 0 2rem;
+}
+/*Sets the margin for al three containers of the navigation bar*/
+.navElement {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/*Nav Links section properties*/
+#navLinks {
+    position: relative;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+#navLinks ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+#navLinks a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin: 0 5rem;
+}
+
+#navLinks a:hover{
+    color: aquamarine;
+}
+/*Nav Logo section properties*/
+#navLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#navLogo a img{
+    width: 25px;
+    height: auto;
+}
+
+#navLogo a {
+    text-decoration: none;
+    color: white;
+    font-weight: 450;
+    /* font-size: 1rem; */
+    transition: all 0.3s ease 0s;
+}
+
+#navLogo a:hover{
+    color: aquamarine;
+}
+
+/*Home Page*/
+#homePage{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    position: relative;
+    padding: 0.5rem;
+    padding-top: 6rem;
+}
+/*First section of Home Page (networkLinks)*/
+#networkLinks{
+    width: 3rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -1rem;
+    margin-left: 1rem;
+    position: fixed;
+}
+
+#networkLinks a{
+   justify-content: space-around;
+   margin-top: 1rem;
+   margin-bottom: 0.2rem;
+}
+
+#networkLinks img{
+   width: 20px;
+   height: auto;
+   transition: all 0.3s ease 0s;
+}
+
+#networkLinks img:hover{
+    width: 30px;
+    height: auto;
+}
+
+#verticalLine{
+    width: 1px;
+    height: 9rem;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+/*Second section of Home Page, Main Text*/
+#mainText {
+    margin: 1rem;
+    margin-top: -1rem;
+    margin-left: 5rem;
+    padding: 0.5rem 2rem;
+    color: white;
+    width: 89vw;
+    height: 15rem;
+    block-size: fit-content;
+}
+
+#mainText h2{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#mainText p{
+    margin: 1rem;
+    width: 95%;
+    font-size: 0.8rem;
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.2));
+    padding: 1rem;
+    border-radius: 1rem;
+}
+/* Style Our Team Container */
+#ourTeamContainer{
+    display: flex;
+    block-size: fit-content;
+    margin: 1rem;
+    margin-left: 5rem;
+    align-items: center;
+}
+
+#ourTeamText{
+    color: white;
+    padding-left: 2rem;
+}
+
+#ourTeamText h2{
+    font-size: 2rem;
+    padding: 1rem;
+    padding-right: 0;
+}
+
+#team {
+    padding: 0 1rem;
+}
+
+#team ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+}
+
+#team ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    width: 15rem;
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.2));
+}
+
+.teamCard {
+    transition: all 0.3s ease 0s;
+}
+
+.teamCard:hover{
+    transform: translateY(-5px);
+}
+
+.teamCard:hover button{
+    background-color: #00616c;
+}
+
+.teamCard img{
+    width: 3rem;
+    height: auto;
+}
+
+.teamCard h4{
+    color: white;
+}
+
+.teamCard p{
+    color: rgb(237, 237, 237);
+}
+
+.teamCard button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 450;
+    width: 6.5rem;
+    height: 1.5rem;
+    background-color: black;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    transition: all 0.3s ease 0s
+}
+/* Style of Our History */
+#historyContainer{
+    margin: 1rem 0;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    padding: 0.5rem 2rem;
+    color: white;
+    width: 89vw;
+    height: 15rem;
+    block-size: fit-content;
+    background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.2));
+    border-radius: 1rem;
+
+}
+
+#historyContainer h2{
+    font-size: 2rem;
+    padding: 1rem;
+    padding-right: 0;
+}
+
+#historyContainer p{
+    margin: 0 1rem;
+    margin-left: 0.2rem;
+    width: 95%;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+}
+
+#imgContainer{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+
+#imgContainer img{
+    width: 40vw;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+#imgContainer img:hover{
+    transform: translateY(-5px);
+}
+

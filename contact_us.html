@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact_us.css">
+</head>
+<body>
+    <div id="navContainer">
+        <nav id="navBar">
+            <div id="navLogo" class="navElement">
+                <a href="index.html"><img src="icons/icon_airplane.png" alt="icon"></a>
+                <a href="index.html">TravelBloom</a>
+            </div>
+            <div id="navLinks" class="navElement">
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about_us.html"><li>About Us</li></a>
+                    <a href="contact_us.html"><li>Contact Us</li></a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Home Page -->
+     <div id="homePage">
+        <div id="networkLinks">
+            <div id="verticalLine"></div>
+            <a href="https://x.com/" target = "_blank"><img src="icons/x icon.png" alt="x icon"></a>
+            <a href="https://www.facebook.com/" target = "_blank"><img src="icons/facebook icon.png" alt=""></a>
+            <a href="https://www.instagram.com/" target = "_blank"><img src="icons/instagram icon.png" alt=""></a>
+            <a href="https://www.youtube.com/" target = "_blank"><img src="icons/youtube icon.png" alt=""></a>
+        </div>
+        <div id="mainText">
+            <h2>Contact Us</h2>
+            <p>Get in touch</p>
+        </div>
+            
+        <div id="contactForm">
+            <form id="form">
+                <label for="nameField">Name</label>
+                <input type="text" required name="nameField" id="nameField" placeholder="Enter your name">
+                <label for="emailField">Email</label>
+                <input type="email" required name = "emailField" id="emailField" placeholder="Enter your email">
+                <label for="msgField">Message</label>
+                <textarea name="msgField" id="msgField" required placeholder="Write your message"></textarea>
+                <button id="submitBtn">Submit</button>
+            </form>
+        </div>
+     </div>
+
+     <div id="popupContainer">
+     </div>
+
+     <script src="contact_us.js"></script>
+</body>
+</html>
